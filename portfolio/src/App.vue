@@ -1,12 +1,8 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="flex w-screen bg-red-700 overflow-x-hidden">
     <div class="flex w-full bg-red-600 border-b-2 border-red-800">
       <div class="flex justify-between lg:mx-10 mx-5 my-5">
-        <div @click="mobile=!mobile" class="blinkButton relative flex justify-center rounded-full bg-blue-500 w-28 h-28 border-8 border-slate-100 shadow-md shadow-red-900">
+        <div @click="mobile=!mobile" class="blinkButton  relative flex justify-center rounded-full bg-blue-500 w-28 h-28 border-8 border-slate-100 shadow-md shadow-red-900">
           <div class="absolute rounded-full h-full w-full shadow-sm shadow-blue-950 "></div>
           <div class="absolute rounded-full h-12 w-12 border-8 border-blue-400 bg-blue-300 skew-x-6 left-3 top-3"></div>
         </div>
@@ -56,21 +52,20 @@ export default{
     blink(){
       let button = document.querySelector('.blinkButton')
       console.log(button);
-      if(button?.classList.contains('.blinker') == true){
-        button?.classList.remove('.blinker')
-      }
-        button?.classList.toggle('bg-blue-500')
-        button?.classList.toggle('blinker')
-        button?.classList.toggle('bg-blue-500')
-    }
-  }
+      button?.classList.toggle('blinker')
+      setTimeout(() => {
+        button?.classList.remove('blinker')
+      }, 600)
+    },
+  },
 }
 </script>
 
 <style scoped>
 
 .blinker{
-  animation: blink 200ms linear;
+  animation: blink 300ms linear 2;
+  animation-delay: 100ms;
 }
 
 @keyframes blink {
