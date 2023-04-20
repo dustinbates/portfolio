@@ -3,11 +3,11 @@
     <div class="flex w-full bg-red-600 border-b-2 border-red-800">
       <div class="flex justify-between lg:mx-10 mx-5 my-5">
         <div @click="mobile = !mobile"
-          class="blinkButton  relative flex justify-center rounded-full bg-blue-500 w-28 h-28 border-8 border-slate-100 shadow-md shadow-red-900">
+          class="blinkButton relative flex justify-center rounded-full bg-blue-500 w-28 h-28 border-8 border-slate-100 shadow-md shadow-red-900">
           <div class="absolute rounded-full h-full w-full shadow-sm shadow-blue-950 "></div>
           <div class="absolute rounded-full h-12 w-12 border-8 border-blue-400 bg-blue-300 skew-x-6 left-3 top-3"></div>
         </div>
-        <div class="flex mx-20">
+        <div class="flex mx-12 md:mx-20">
           <div v-scrollAnimate
             class="relative rounded-full bg-red-500 w-8 h-8 border-2 mx-5 ml-0 border-red-900 shadow-md shadow-red-800">
             <div class="absolute rounded-full h-3 w-3 border-2 border-red-400 bg-red-300 skew-x-6 left-1 top-1"></div>
@@ -27,15 +27,23 @@
     <div class="flex flex-col w-full">
       <div class="flex justify-end pr-10 bg-red-600 w-full h-20 box-shadow">
         <transition-group name="buttons">
-          <div v-if="!mobile" class="flex w-1/2 items-center ">
-            <button @click="blink"
-              class="w-28 bg-sky-400 border-2 border-red-800 rounded-l-md p-2 shadow-md shadow-red-800">About</button>
-            <button @click="blink"
-              class="w-28 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Projects</button>
-            <button @click="blink"
-              class="w-28 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Resume</button>
-            <button @click="blink"
-              class="w-28 bg-sky-400 border-2 border-l-0 border-red-800 rounded-r-md p-2 shadow-md shadow-red-800">Contact</button>
+          <div v-if="!mobile" class="flex w-1/2 items-center md:justify-end text-slate-200 ">
+            <router-link :to="{ name: 'About' }">
+              <button @click="blink"
+                class="w-34 bg-sky-400 border-2 border-red-800 rounded-l-md p-2 shadow-md shadow-red-800">About</button>
+            </router-link>
+            <router-link :to="{ name: 'Projects' }">
+              <button @click="blink"
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Projects</button>
+            </router-link>
+            <router-link :to="{ name: 'Resume' }">
+              <button @click="blink"
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Resume</button>
+            </router-link>
+            <router-link :to="{ name: 'Contact' }">
+              <button @click="blink"
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 rounded-r-md p-2 shadow-md shadow-red-800">Contact</button>
+            </router-link>
           </div>
         </transition-group>
       </div>
@@ -48,7 +56,9 @@
         <div class="rounded-full w-8 h-8 mx-12 border-2 border-red-900 shadow-inner shadow-red-700 bg-red-600"></div>
         <div class="rounded-full w-8 h-8 mx-12 border-2 border-red-900 shadow-inner shadow-red-700 bg-red-600"></div>
       </div>
-      <div class="flex rounded-xl w-11/12 h-5/6 mx-auto md:my-2 bg-black"></div>
+      <div class="flex rounded-xl w-11/12 h-5/6 mx-auto md:mt-2 bg-black">
+        <router-view />
+      </div>
       <div class="flex justify-between items-center px-5 md:px-20">
         <div class="rounded-full w-12 h-12 border-2 mx-14 md:mx-12 border-red-900 shadow-inner shadow-red-700 bg-red-600">
         </div>
@@ -145,4 +155,5 @@ export default {
 .buttons-leave-to {
   opacity: 0;
   transform: translateX(-400px);
-}</style>
+}
+</style>
