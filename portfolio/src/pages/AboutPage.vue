@@ -14,6 +14,7 @@
       <h4 class="text-sm md:text-md 2xl:text-lg mt-3 md:mt-10 mr-5 text-slate-200 text-shadow">Description:<br> Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over 520 hours of hands-on experience and over 40 applications created, he is sure to bring value to any team.
       He spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading long-series novels, or playing various games both on and offline.  </h4>
     </div>
+    
   </div>
 </template>
 

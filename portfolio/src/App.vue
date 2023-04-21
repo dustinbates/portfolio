@@ -154,6 +154,6 @@ export default {
 .buttons-enter-from,
 .buttons-leave-to {
   opacity: 0;
-  transform: translateX(-400px);
+  transform: translateX(-200px);
 }
 </style>
