@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue-typewriter": "^2.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

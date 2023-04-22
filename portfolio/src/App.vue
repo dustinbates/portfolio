@@ -27,22 +27,22 @@
     <div class="flex flex-col w-full">
       <div class="flex justify-end pr-10 bg-red-600 w-full h-20 box-shadow">
         <transition-group name="buttons">
-          <div v-if="!mobile" class="flex w-1/2 items-center md:justify-end text-slate-200 ">
+          <div v-if="!mobile" class="flex w-1/2 items-center md:justify-end text-slate-200">
             <router-link :to="{ name: 'About' }">
               <button @click="blink"
-                class="w-34 bg-sky-400 border-2 border-red-800 rounded-l-md p-2 shadow-md shadow-red-800">About</button>
+                class="w-34 bg-sky-400 border-2 border-red-800 rounded-l-md p-2 shadow-md shadow-red-800 text-shadow">About</button>
             </router-link>
             <router-link :to="{ name: 'Projects' }">
               <button @click="blink"
-                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Projects</button>
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800 text-shadow">Projects</button>
             </router-link>
             <router-link :to="{ name: 'Resume' }">
               <button @click="blink"
-                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800">Resume</button>
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 p-2 shadow-md shadow-red-800 text-shadow">Resume</button>
             </router-link>
             <router-link :to="{ name: 'Contact' }">
               <button @click="blink"
-                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 rounded-r-md p-2 shadow-md shadow-red-800">Contact</button>
+                class="w-34 bg-sky-400 border-2 border-l-0 border-red-800 rounded-r-md p-2 shadow-md shadow-red-800 text-shadow">Contact</button>
             </router-link>
           </div>
         </transition-group>
@@ -96,6 +96,9 @@ export default {
 </script>
 
 <style scoped>
+.text-shadow{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.583);
+}
 .blinker {
   animation: blink 300ms linear 2;
   animation-delay: 100ms;
