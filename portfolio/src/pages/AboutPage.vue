@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col md:flex-row w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg overflow-scroll">
-    <img v-if="show" src="../assets/img/Dustin Bates 4 Medium.png" alt=""
+    <img src="../assets/img/Dustin Bates 4 Medium.png" alt=""
       class="pic flex flex-row md:flex-col h-72 sm:h-5/6 sm:w-5/12 rounded-xl mx-5 mt-3 md:mt-10 animate__animated animate__bounceIn">
     <div class="flex flex-col md:w-1/3 mx-5 mb-5 justify-start">
       <h1 class="text-2xl md:text-3xl mt-3 md:mt-10 text-slate-200 text-shadow">
@@ -44,17 +44,7 @@
     <div class="flex flex-col md:w-1/3 mx-5 mb-5">
       <h4 class="text-sm md:text-md 2xl:text-lg mt-3 md:mt-10 mr-5 text-slate-200 text-shadow">
         Description:<br>
-        Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web
-        applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over
-        520 hours of hands-on experience and over 40 applications created, he is sure to bring value to any team. He
-        spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading
-        long-series novels, or playing various games both on and offline.
-        <!-- <div ref="bio"></div>
-        Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web
-        applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over
-        520 hours of hands-on experience and over 40 applications created, he is sure to bring value to any team. He
-        spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading
-        long-series novels, or playing various games both on and offline. -->
+        <div v-html="typedText"></div>
       </h4>
     </div>
 
@@ -64,19 +54,16 @@
 
 <script>
 import 'animate.css'
-import { onMounted, ref } from 'vue'
-import VueTypewriter from 'vue-typewriter'
+import { onMounted, ref, shallowReactive } from 'vue'
 export default {
-  components: {
-    VueTypewriter
-  },
   setup() {
-    const bio = ref()
+    const typedText = ref('')
+    const show = ref(false);
 
     function type(letter, delay) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          bio.value.innerText += letter
+          typedText.value += letter
           resolve(letter)
         }, delay)
       })
@@ -89,19 +76,25 @@ export default {
     }
 
     onMounted(async () => {
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve();
+        }, 6500);
+      });
+      show.value = true;
       let para = `Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over 520 hours of hands - on experience and over 40 applications created, he is sure to bring value to any team.He spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading long - series novels, or playing various games both on and offline.`
 
       let words = para.split(' ')
       for (let i = 0; i < words.length; i++) {
-        await typer(words[i])
-        bio.value.innerText += ' '
+        await typer(words[i], 8)
+        typedText.value += ' '
       }
 
     })
 
     return {
-      show: true,
-      bio,
+      show,
+      typedText,
     }
   }
 }
@@ -142,4 +135,5 @@ img {
 
 .last {
   --animate-delay: 1.19s;
-}</style>
+}
+</style>
