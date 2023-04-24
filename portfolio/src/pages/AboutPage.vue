@@ -57,7 +57,7 @@
 import 'animate.css'
 import { onMounted, ref, shallowReactive } from 'vue'
 export default {
-  setup() {
+  data() {
     const typedText = ref('')
     const show = ref(false);
 
