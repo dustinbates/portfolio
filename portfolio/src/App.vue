@@ -62,11 +62,22 @@
       <div class="flex justify-between items-center px-5 md:px-20">
         <div class="rounded-full w-12 h-12 border-2 mx-14 md:mx-12 border-red-900 shadow-inner shadow-red-700 bg-red-600">
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-20 h-20">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
+        <div class="flex md:hidden">
+          <router-link :to="{ name: 'Menu' }">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-20 h-20">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+          </router-link>
+        </div>
+        <div class="hidden md:flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-20 h-20">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+        </div>
       </div>
       <div class="triangle2 absolute bottom-0 left-0"></div>
     </div>

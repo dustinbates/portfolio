@@ -31,11 +31,19 @@ const routes = [
     name: 'Contact',
     component: loadPage('ContactPage')
   },
+  {
+    path: '/Menu',
+    name: 'Menu',
+    component: loadPage('MenuPage')
+  }
 ]
 
 export const router = createRouter({
   linkActiveClass: 'router-link-active',
   linkExactActiveClass: 'router-link-exact-active',
   history: createWebHashHistory(),
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition){
+    return {top: 0}
+  }
 })
