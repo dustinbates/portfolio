@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg overflow-scroll overflow-x-hidden">
-    <div class="flex flex-col md:w-1/2 justify-center p-2 md:p-0 md:m-5 text-slate-200 text-shadow">
+    <div class="flex flex-col md:w-1/2 justify-center p-2 md:p-0 md:m-5 text-slate-200 text-shadow select-none">
       <u class="text-3xl ms-2">Experience</u>
       <br>
       <Dropdown class="transition-all ease-linear" :title="'Software Development Student'"
