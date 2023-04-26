@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 border rounded-lg mb-2 md:w-11/12">
+  <div class="p-3 border-2 shadow-sm shadow-sky-700 rounded-lg mb-2 md:w-11/12">
     <h1 @click="toggleDropdown" class="text-xl md:text-2xl mb-3 cursor-pointer">{{ title }}
       <p class="text-sm mt-2 md:m-0 md:text-lg"><i>{{ worked }}</i></p>
     </h1>

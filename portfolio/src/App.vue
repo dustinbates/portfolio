@@ -62,7 +62,7 @@
       <div class="flex justify-between items-center px-5 md:px-20">
         <div class="rounded-full w-12 h-12 border-2 mx-14 md:mx-12 border-red-900 shadow-inner shadow-red-700 bg-red-600">
         </div>
-        <div class="flex md:hidden">
+        <div class="flex md:hidden" @click="blink">
           <router-link :to="{ name: 'Menu' }">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-20 h-20">

@@ -6,37 +6,37 @@
     <div class="flex flex-col md:w-1/3 mx-5 mb-5 justify-start">
       <h1 class="text-2xl md:text-3xl mt-3 md:mt-10 text-slate-200 text-shadow">
         Name:<br>
-        <p class="animate__animated animate__zoomIn animate__delay-1s animate__fast">
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s first">
           Dustin Bates
         </p>
       </h1>
       <h2 class="md:text-2xl mt-5 text-slate-200 text-shadow">
         Type:<br>
-        <p class="animate__animated animate__zoomIn animate__delay-2s animate__fast">
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s second">
           Software Developer
         </p>
       </h2>
       <h2 class="md:text-2xl mt-5 text-slate-200 text-shadow">
         Height:
-        <p class="animate__animated animate__zoomIn animate__delay-3s animate__fast">
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s third">
           6'0"
         </p>
       </h2>
       <h2 class="md:text-2xl mt-5 text-slate-200 text-shadow">
         Weight:
-        <p class="animate__animated animate__zoomIn animate__delay-4s animate__fast">
-          175lbs
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s fourth">
+          175 lbs
         </p>
       </h2>
       <h2 class="md:text-xl lg:text-2xl mt-5 text-slate-200 text-shadow">
         Habitat:
-        <p class="animate__animated animate__zoomIn animate__delay-5s animate__fast">
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s fifth">
           Boise, ID
         </p>
       </h2>
       <h2 class="md:text-lg mt-5 text-slate-200 text-shadow">
         Abilities: <br>
-        <p class="last animate__animated animate__zoomIn animate__delay-5s">
+        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s last">
           Adaptability, Creative Problem Solver, Quick Learner, Communicator
         </p>
       </h2>
@@ -44,7 +44,7 @@
     </div>
     <div class="flex flex-col md:w-1/3 mx-5 mb-5">
       <h4 class="text-sm md:text-md 2xl:text-lg mt-3 md:mt-10 mr-5 text-slate-200 text-shadow">
-        Description:<br>
+        <p class="text-lg">Description:</p>
         <div v-html="typedText"></div>
       </h4>
     </div>
@@ -81,10 +81,10 @@ export default {
         setTimeout(() => {
           // @ts-ignore
           resolve();
-        }, 7000);
+        }, 4200);
       });
       show.value = true;
-      let para = `Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over 520 hours of hands - on experience and over 40 applications created, he is sure to bring value to any team.He spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading long - series novels, or playing various games both on and offline.`
+      let para = `Dustin is a Full-Stack Software Developer with a passion for creating intuitive and user-friendly web applications. He is highly adaptable, with the skill to learn just about anything he puts his mind to. With over 520 hours of hands-on experience and over 40 applications created, he is sure to bring value to any team.He spends his free time challenging himself by learning new skills like musical instruments or DIY projects, reading long-series novels, or playing various games both on and offline.`
 
       let words = para.split(' ')
       for (let i = 0; i < words.length; i++) {
@@ -106,10 +106,6 @@ export default {
 <style scoped>
 .bounce-enter-active {
   animation: bounce-in .75s;
-}
-
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
 }
 
 @keyframes bounce-in {
@@ -135,7 +131,27 @@ img {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.583);
 }
 
+.first {
+  --animate-delay: 1s;
+}
+
+.second {
+  --animate-delay: 1.5s;
+}
+
+.third {
+  --animate-delay: 2s;
+}
+
+.fourth {
+  --animate-delay: 2.5s;
+}
+
+.fifth {
+  --animate-delay: 3s;
+}
+
 .last {
-  --animate-delay: 1.19s;
+  --animate-delay: 3.5s;
 }
 </style>
