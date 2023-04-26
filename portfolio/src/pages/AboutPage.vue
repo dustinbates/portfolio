@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col md:flex-row w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg shadow-inner shadow-sky-600 overflow-scroll">
+    class="flex flex-col md:flex-row w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg shadow-inner shadow-sky-600 overflow-scroll select-none">
     <img src="../assets/img/Dustin Bates 4 Medium.png" alt=""
       class="pic flex flex-row md:flex-col h-72 sm:h-5/6 sm:w-5/12 rounded-xl mx-5 mt-3 md:mt-10 animate__animated animate__bounceIn">
     <div class="flex flex-col md:w-1/3 mx-5 mb-5 justify-start">

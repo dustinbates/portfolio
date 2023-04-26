@@ -1,14 +1,33 @@
 <template>
   <div class="w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg overflow-scroll overflow-x-hidden">
-    <div class="md:flex">
-      <div class="flex flex-col md:w-1/2 justify-center p-2 md:p-0 md:m-5 text-slate-200 text-shadow select-none">
-        <u class="text-3xl ms-2 transition-all ease-linear">Experience</u>
+    <div class="flex flex-col md:flex-row">
+      <div class="order-3 md:order-1 flex flex-col md:w-1/5 p-2 md:p-0 md:m-5 text-slate-200 text-shadow select-none">
+        <u class="text-2xl ms-2 mb-5">Skills</u>
+        <ul class="list text-lg px-2">
+          <li class="pt-2">HTML/CSS</li>
+          <li class="pt-2">JavaScript</li>
+          <li class="pt-2">Bootstrap</li>
+          <li class="pt-2">Vue.js</li>
+          <li class="pt-2">Node.js</li>
+          <li class="pt-2">C#</li>
+          <li class="pt-2">Tailwind</li>
+          <li class="pt-2">MongoDB</li>
+          <li class="pt-2">MySQL</li>
+          <li class="pt-2">Computer Hardware</li>
+          <li class="pt-2">Adaptability</li>
+          <li class="pt-2">Collaboration</li>
+          <li class="pt-2">Communication</li>
+          <li class="pt-2">Leadership</li>
+          <li class="pt-2">Passion for Learning</li>
+        </ul>
+      </div>
+      <div class="order-1 md:order-2 flex flex-col md:w-3/5 p-2 md:p-0 md:my-5 text-slate-200 text-shadow select-none">
+        <u class="text-2xl ms-2 transition-all ease-linear">Experience</u>
         <br>
         <Dropdown :title="'Software Development Student'" :worked="'Boise CodeWorks (2023)'" :list="[
           'Developed front and back-end applications over 13 weeks with over 520+ hours of hands-on experience',
           'Built applications using HTML, Bootstrap, JavaScript, Node.js, Vue.js, C#, and more',
           'Worked in teams to create applications within a short time span using Scrum/Agile methodologies',
-          'Received the Golden Duck award for successfully completing all checkpoint assignments with 100%'
         ]" />
         <Dropdown :title="'CNC Machinist'" :worked="'Chris Reeve Knives (2021-2022)'" :list="[
           'Operated 5 types of CNC machines including Matsuura, Hyundai, Makino, Haas, and Fanuc to produce quality components for knife assembly',
@@ -36,10 +55,21 @@
           'Worked with remove teams of IT to complete installation and ensure full operation of network equipment'
         ]" />
       </div>
-      <div class="flex flex-col md:w-1/2 p-2 md:p-0 md:m-5 text-slate-200 text-shadow select-none">
-        <u class="text-3xl ms-2 transition-all ease-linear">Education</u>
-
+      <div class="order-2 md:order-3 flex flex-col md:w-1/5 p-2 md:p-0 md:my-5 text-slate-200 text-shadow select-none">
+        <u class="text-2xl me-10">Education</u>
+        <br>
+        <Dropdown :title="'Boise CodeWorks'" :worked="'Certificate of Completion'" :list="[
+          'Built over 40 applications throughout the course',
+          'Gained knowledge of Scrum/Agile methodologies',
+          'Received the Golden Duck award for successfully completing all checkpoint assignments with 100%'
+        ]" />
+        <Dropdown :title="'Meridian Technical Charter High School'" :worked="'High School Diploma'" :list="[
+          'Graduated with 3.9 GPA',
+          'Completion of Electronics Engineering pathway',
+          'Accepted into the National Technical Honor Society'
+        ]" />
       </div>
+
     </div>
   </div>
 </template>
