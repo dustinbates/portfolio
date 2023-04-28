@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex flex-col md:flex-row w-full bg-gradient-to-b from-sky-500 to-sky-600 rounded-lg shadow-inner shadow-sky-600 overflow-scroll select-none">
-    <img src="../assets/img/Dustin Bates 4 Medium.png" alt=""
+    <img src="../assets/img/DustinBates4Medium.png" alt=""
       class="pic flex flex-row md:flex-col h-72 sm:h-5/6 sm:w-5/12 rounded-xl mx-5 mt-3 md:mt-10 animate__animated animate__bounceIn">
     <div class="flex flex-col md:w-1/3 mx-5 mb-5 justify-start">
       <h1 class="text-2xl md:text-3xl mt-3 md:mt-10 text-slate-200 text-shadow">
@@ -19,13 +19,13 @@
       <h2 class="md:text-2xl mt-5 text-slate-200 text-shadow">
         Height:
         <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s third">
-          6'0"
+          12'3"
         </p>
       </h2>
       <h2 class="md:text-2xl mt-5 text-slate-200 text-shadow">
         Weight:
         <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s fourth">
-          175 lbs
+          520 lbs
         </p>
       </h2>
       <h2 class="md:text-xl lg:text-2xl mt-5 text-slate-200 text-shadow">
