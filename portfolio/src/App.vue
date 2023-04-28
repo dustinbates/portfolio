@@ -155,6 +155,7 @@ export default {
   height: 0;
   border-bottom: 80px solid #b91c1c;
   border-right: 80px solid transparent;
+  transform: translate(-1px, 1px)
 }
 
 .box-shadow {
