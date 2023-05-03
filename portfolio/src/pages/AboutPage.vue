@@ -36,7 +36,7 @@
       </h2>
       <h2 class="md:text-lg mt-5 text-slate-200 text-shadow">
         Abilities: <br>
-        <p class="animate__animated animate__zoomIn animate__fast animate__delay-1s last">
+        <p class="mb-5 animate__animated animate__zoomIn animate__fast animate__delay-1s last">
           Adaptability, Creative Problem Solver, Quick Learner, Communicator
         </p>
       </h2>
@@ -55,7 +55,7 @@
 
 <script>
 import 'animate.css'
-import { onMounted, ref, shallowReactive } from 'vue'
+import { onMounted, ref } from 'vue'
 export default {
   data() {
     const typedText = ref('')

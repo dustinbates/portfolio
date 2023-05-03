@@ -37,7 +37,6 @@ export default {
       emailjs.sendForm('dustin.bates98', 'template_vjea5hp', this.$refs.form, 'kQqS4s1nbkGYebstt')
         .then((result) => {
           console.log('SUCCESS!', result.text);
-          this.$swal('Nice!')
         }, (error) => {
           console.log('FAILED...', error.text);
         });
