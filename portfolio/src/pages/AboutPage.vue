@@ -44,7 +44,7 @@
     </div>
     <div class="flex flex-col md:w-1/3 mx-5 mb-5">
       <h4 class="text-sm md:text-md 2xl:text-lg mt-3 md:mt-10 mr-5 text-slate-200 text-shadow">
-        <p class="text-lg">Description:</p>
+        <p class="text-lg">Description: </p>
         <div v-html="typedText"></div>
       </h4>
     </div>
